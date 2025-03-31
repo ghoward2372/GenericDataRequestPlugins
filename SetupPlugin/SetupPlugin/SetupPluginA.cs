@@ -8,6 +8,17 @@ namespace SetupPlugins
     [Export(typeof(ISetupPlugin))]
     public class SetupPluginA : ISetupPlugin
     {
+        public SetupPluginA()
+        {
+            var contractAssembly = typeof(DataRequestPipeline.DataContracts.ISetupPlugin).Assembly;
+            Console.WriteLine("Plugin sees contracts assembly at: " + contractAssembly.Location);
+            Console.WriteLine("Full name: " + contractAssembly.FullName);
+
+            var pluginContractAssembly = typeof(DataRequestPipeline.DataContracts.ISetupPlugin).Assembly;
+            Console.WriteLine("Plugin contract assembly: " + pluginContractAssembly.Location);
+
+        }
+
         public async Task ExecuteAsync(SetupContext context)
         {
             Logger.Log("SetupPluginA: Executing setup...");

@@ -17,6 +17,7 @@
   <ItemGroup>
     <Reference Include="DataRequestPipeline.DataContracts">
       <HintPath>..\..\..\DataRequestPipeline.DataContracts.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 
