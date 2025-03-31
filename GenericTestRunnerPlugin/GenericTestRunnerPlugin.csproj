@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+    <PackageReference Include="System.Composition.AttributedModel" Version="9.0.3" />
+    <PackageReference Include="System.Composition.Hosting" Version="9.0.3" />
+    <PackageReference Include="System.Composition.TypedParts" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataRequestPipeline.DataContracts">
+      <HintPath>..\..\..\DataRequestPipeline.DataContracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
